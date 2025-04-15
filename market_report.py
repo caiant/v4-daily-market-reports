@@ -71,7 +71,7 @@ def get_market_data():
                 last_close = info["Close"].iloc[-1]
                 prev_close = info["Close"].iloc[-2]
                 change = last_close - prev_close
-                percent_change = (change / prev_close) * 100
+                percent_change = (change / prev_close) * 100 
 
                 if "Yield" in name:
                     data.append([name, f"{last_close:.2f}%", f"{change:.2f}", f"{percent_change:.2f}%"])
